@@ -1,0 +1,39 @@
+nav.navbar.navbar-expand-lg.bg-body-primary.sticky-top
+  .container-fluid
+    a.navbar-brand(href='/') NoteBook
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.me-auto.mb-2.mb-lg-0
+        li.nav-item
+          a.nav-link(aria-current='page' href='/' class=(title === 'Home' ? 'active' : '')) Home
+        li.nav-item
+          a.nav-link(href='/about' class=(title === 'About' ? 'active' : '')) About
+        li.nav-item
+          a.nav-link(href='/notes' class=(title === 'My Notes' ? 'active' : '')) New Note
+        li.nav-item
+          a.nav-link(href='/reader' class=(title === 'Reading Page' ? 'active' : '')) Reader
+      
+      form.d-flex.me-3(role='search')
+        input.form-control.me-2(type='search' placeholder='Search notes...' aria-label='Search')
+        button.btn.btn-outline-primary(type='submit') Search
+      
+      // Theme toggle button
+      button#themeToggle.btn.btn-outline-primary.me-3(type='button' aria-label='Toggle theme')
+        i.bi.bi-moon-stars
+      
+      // User profile dropdown
+      .dropdown
+        button#userDropdown.btn.btn-outline-primary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+          i.bi.bi-person-circle.me-1
+          | Profile
+        ul.dropdown-menu.dropdown-menu-end(aria-labelledby='userDropdown')
+          li
+            a.dropdown-item(href='#') Settings
+          li
+            a.dropdown-item(href='#') My Notes
+          li
+            hr.dropdown-divider
+          li
+            a.dropdown-item(href='#') Logout
+

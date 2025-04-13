@@ -1,0 +1,16 @@
+extends common\layout 
+
+block content
+  h1= title
+  p Welcome to the notes page
+  
+  // Add your form here
+  form(action="/notes" method="POST")
+    .mb-3
+      label.form-label(for='title') Name or Title
+      input#title.form-control(type='text' placeholder='Enter a title for your note')
+    .mb-3
+      label.form-label(for='content') Your Note
+      textarea#content.form-control(rows='12' placeholder='Write your note here...')
+    .mb-3
+      button.btn.btn-primary(type='submit') Save Note

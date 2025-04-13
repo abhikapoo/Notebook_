@@ -1,0 +1,92 @@
+NOTEBOOK APPLICATION DOCUMENTATION
+============================
+
+1. Project Overview
+------------------
+Name: Notebook
+Version: 0.0.0
+Type: Web Application
+Framework: Express.js
+
+2. Project Structure
+-------------------
+Root Directories:
+- app.js (Main application file)
+- bin/ (Server startup scripts)
+- node_modules/ (Dependencies)
+- public/ (Static assets)
+- routes/ (Route handlers)
+- views/ (Pug templates)
+
+3. Dependencies
+--------------
+Main Dependencies:
+- express: ~4.16.1 (Web framework)
+- pug: 2.0.0-beta11 (Template engine)
+- bootstrap: ^5.3.5 (Frontend framework)
+- cookie-parser: ~1.4.4
+- debug: ~2.6.9
+- http-errors: ~1.6.3
+- morgan: ~1.9.1
+
+Dev Dependencies:
+- nodemon: ^3.1.9 (Development auto-reloader)
+
+4. Features & Routes
+-------------------
+Available Pages:
+- Home Page (/)
+- Notes Page (/notes)
+  * View notes
+  * Create new notes
+- About Page (/about)
+- Contact Page (/contact)
+- Reader Page (/reader)
+- User Management (/users)
+
+5. Technical Implementation
+-------------------------
+- MVC Architecture Pattern
+- Server-side rendering with Pug templates
+- Bootstrap-based responsive design
+- Form-based note creation system
+- Common layout system with shared components
+- Static file serving
+- Error handling middleware
+
+6. Views Structure
+-----------------
+Main Views:
+- home.pug
+- notes.pug
+- about.pug
+- contact.pug
+- reader.pug
+- error.pug
+
+Shared Components:
+- common/layout.pug (Base template)
+- common/navbar.pug (Navigation)
+- common/form.pug (Form components)
+
+7. Public Assets
+---------------
+CSS:
+- bootstrap.min.css
+- style.css
+
+JavaScript:
+- bootstrap.bundle.min.js
+
+Additional Directories:
+- images/
+- javascripts/
+- stylesheets/
+
+8. Development
+-------------
+Start Commands:
+- Production: npm start
+- Development: npm run dev (with nodemon for auto-reload)
+
+Note: Currently, the note-taking functionality logs to console only and does not have permanent storage implementation.
